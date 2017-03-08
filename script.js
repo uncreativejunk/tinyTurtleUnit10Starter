@@ -28,23 +28,51 @@ triangle(80);
 
 forward(50);
 
-function rhombus(size){
-    forward(size);
+function rhombus(x){
+    forward(x);
     right (100);
-    forward(size);
+    forward(x);
     right(80);
-    forward(size);
+    forward(x);
     right(80);
-    forward(size);
+    forward(x);
     right(190);
 }
-rhombus(38);
+rhombus(60);
 
-function hexagon(){
-    
+function hexagon(x){
+    forward(x);
+    right (60);
+    forward(x);
+    right(60);
+    forward(x);
+    right(60);
+    forward(x);
+    right(60);
+    forward(x);
+    right (60);
+    forward(x);
+    right(60);
+  
 }
 
-hexagon();
+hexagon(45);
+
+function shape(type, size){
+    if(type === "triangle"){
+        triangle(size);
+    }else if(type === "square") {
+        square(size);
+    }else if(type === "rhombus"){
+        rhombus(size);
+    }else {
+        alert("you gave me something i dont know.");
+    }
+}
 
 
+//shape ('triangle',40);
 
+//shape ("square", 50);
+
+//shape ("rhombus", 50);
